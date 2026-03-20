@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Idul Fitri</title>
+<style>
+body{margin:0;font-family:sans-serif;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff;display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden;text-align:center}h1{font-size:2em;margin:0}p{font-size:1em;margin:10px 20px}.card{padding:20px;border-radius:20px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);box-shadow:0 0 20px rgba(255,255,255,0.2);animation:fadeIn 2s ease}.moon{position:absolute;width:80px;height:80px;border-radius:50%;background:#fff;top:10%;right:10%;box-shadow:-20px 0 0 0 #2c5364}.star{position:absolute;width:2px;height:2px;background:#fff;animation:twinkle 2s infinite ease-in-out}.ketupat{width:50px;height:50px;background:#00c853;position:absolute;bottom:-60px;left:50%;transform:translateX(-50%) rotate(45deg);animation:floatUp 6s infinite}.ketupat:before,.ketupat:after{content:'';position:absolute;background:#00c853}.ketupat:before{width:50px;height:50px;top:-50px;left:0}.ketupat:after{width:50px;height:50px;top:0;left:-50px}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}@keyframes floatUp{0%{bottom:-60px;opacity:0}50%{opacity:1}100%{bottom:110%;opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="moon"></div>
+
+<div id="stars"></div>
+
+<div class="card">
+  <h1>🌙 Selamat Hari Raya Idul Fitri</h1>
+  <p>Mohon Maaf Lahir & Batin</p>
+  <p>Taqabbalallahu minna wa minkum</p>
+</div>
+
+<div class="ketupat"></div>
+
+<script>
+const starsContainer=document.getElementById('stars');
+for(let i=0;i<60;i++){
+  const star=document.createElement('div');
+  star.className='star';
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*2+'s';
+  starsContainer.appendChild(star);
+}
+</script>
+
+</body>
+</html>
